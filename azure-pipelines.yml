@@ -1,0 +1,28 @@
+
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+- master
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+
+variables:
+  dockerId: luoyunchong@foxmail.com            
+  namespace: igeekfan                            
+  imageName: devops      
+  registry: registry.cn-hangzhou.aliyuncs.com
+  dockerfilepath:  devops/Dockerfile 
+
+
+steps:
+- script: |
+    docker build -f $(dockerfilepath) -t $(imageName) .
+    docker login -u $(dockerId) -p $(pwd) $(registry)
+    docker tag $(imageName) $(registry)/$(namespace)/$(imageName)
+    docker push $(registry)/$(namespace)/$(imageName)
+  displayName: push to aliyun
