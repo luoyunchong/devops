@@ -12,11 +12,11 @@ pool:
 
 
 variables:
-  dockerId: luoyunchong@foxmail.com                  # 阿里云 login username
-  namespace: igeekfan                              # 阿里云 命名空间
-  imageName: devops                           # 阿里云 仓库名称
-  registry: registry.cn-hangzhou.aliyuncs.com   # 阿里云 公网地址
-  dockerfilepath:  Dockerfile       # Github Dockerfile相对路径
+  dockerId: luoyunchong@foxmail.com            
+  namespace: igeekfan                            
+  imageName: devops      
+  registry: registry.cn-hangzhou.aliyuncs.com
+  dockerfilepath:  devops/Dockerfile 
 
 
 steps:
