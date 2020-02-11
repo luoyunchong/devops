@@ -2,7 +2,6 @@ using System;
 using System.IO;
 using AutoMapper;
 using DevOps.Core.AutoMapper;
-using DevOps.Core.Domain;
 using FreeSql;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -18,9 +17,9 @@ namespace DevOps.Web
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
-
+            IConfigurationSection configurationSection = Configuration.GetSection("ConnectionStrings:Default");
             Fsql = new FreeSqlBuilder()
-                .UseConnectionString(DataType.MySql, @"Data Source=127.0.0.1;Port=3306;User ID=root;Password=123456;Initial Catalog=DevOpsWeb;Charset=utf8;SslMode=none;Max pool size=10")
+                .UseConnectionString(DataType.MySql, configurationSection.Value)
                 .UseAutoSyncStructure(true)
                 .Build();
 
