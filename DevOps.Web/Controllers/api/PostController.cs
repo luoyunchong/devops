@@ -29,7 +29,7 @@ namespace DevOps.Web.Controllers.api
         /// <param name="searchPostDto"></param>
         /// <returns></returns>
         [HttpGet]
-        public PagedResultDto<Post> Get(SearchPostDto searchPostDto)
+        public PagedResultDto<Post> Get([FromQuery] SearchPostDto searchPostDto)
         {
             ISelect<Post> selectPost = _fsql
                 .Select<Post>()
