@@ -11,10 +11,10 @@ WORKDIR /src
 RUN ls -al
 
 
-COPY ["DevOps.Web/devops.csproj", "devops/"]
+COPY ["DevOps.Web/DevOps.Web.csproj", "DevOps.Web/"]
 RUN dotnet restore "DevOps.Web/DevOps.Web.csproj"
 COPY . .
-WORKDIR "/src/devops"
+WORKDIR "/src/DevOps.Web"
 RUN dotnet build "DevOps.Web.csproj" -c Release -o /app/build
 
 FROM build AS publish
