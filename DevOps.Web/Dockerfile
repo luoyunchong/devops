@@ -11,16 +11,16 @@ WORKDIR /src
 RUN ls -al
 
 
-COPY ["devops/devops.csproj", "devops/"]
-RUN dotnet restore "devops/devops.csproj"
+COPY ["DevOps.Web/devops.csproj", "devops/"]
+RUN dotnet restore "DevOps.Web/DevOps.Web.csproj"
 COPY . .
 WORKDIR "/src/devops"
-RUN dotnet build "devops.csproj" -c Release -o /app/build
+RUN dotnet build "DevOps.Web.csproj" -c Release -o /app/build
 
 FROM build AS publish
-RUN dotnet publish "devops.csproj" -c Release -o /app/publish
+RUN dotnet publish "DevOps.Web.csproj" -c Release -o /app/publish
 
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
-ENTRYPOINT ["dotnet", "devops.dll"]
+ENTRYPOINT ["dotnet", "Devops.Web.dll"]

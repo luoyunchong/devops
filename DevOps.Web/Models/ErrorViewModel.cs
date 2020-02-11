@@ -1,6 +1,4 @@
-using System;
-
-namespace devops.Models
+namespace Devops.Web.Models
 {
     public class ErrorViewModel
     {
