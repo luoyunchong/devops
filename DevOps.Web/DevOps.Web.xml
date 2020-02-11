@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>DevOps.Web</name>
+    </assembly>
+    <members>
+        <member name="M:DevOps.Web.Controllers.api.BlogController.Get(DevOps.Core.Web.PageDto)">
+            <summary>
+            博客列表页 
+            </summary>
+            <param name="pageDto">分页参数</param>
+            <returns></returns>
+        </member>
+        <member name="M:DevOps.Web.Controllers.api.PostController.Get(DevOps.Core.Models.Posts.SearchPostDto)">
+            <summary>
+            根据博客id、分页条件查询评论信息
+            </summary>
+            <param name="searchPostDto"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
