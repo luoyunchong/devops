@@ -10,13 +10,12 @@ trigger:
 pool:
   vmImage: 'ubuntu-latest'
 
-
 variables:
   dockerId: luoyunchong@foxmail.com            
   namespace: igeekfan                            
   imageName: devops      
   registry: registry.cn-hangzhou.aliyuncs.com
-  dockerfilepath:  devops/Dockerfile 
+  dockerfilepath:  DevOps.Web/Dockerfile 
 
 
 steps:
