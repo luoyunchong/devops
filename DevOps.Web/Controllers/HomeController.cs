@@ -1,9 +1,9 @@
 ﻿using System.Diagnostics;
-using Devops.Web.Models;
+using DevOps.Web.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 
-namespace Devops.Web.Controllers
+namespace DevOps.Web.Controllers
 {
     public class HomeController : Controller
     {

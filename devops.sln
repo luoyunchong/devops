@@ -10,7 +10,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{B287DE8F-8
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DevOps.Core", "DevOps.Core\DevOps.Core.csproj", "{F5DC55E9-A301-4358-93EF-F9BD558A93E7}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Devops.Web", "DevOps.Web\Devops.Web.csproj", "{56C44AB4-EDE0-41E6-A6D1-24D64C3CE160}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DevOps.Web", "DevOps.Web\DevOps.Web.csproj", "{56C44AB4-EDE0-41E6-A6D1-24D64C3CE160}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

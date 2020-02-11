@@ -8,7 +8,7 @@ using DevOps.Core.Web;
 using FreeSql;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Devops.Web.Controllers.api
+namespace DevOps.Web.Controllers.api
 {
     [Route("api/[controller]")]
     [ApiController]

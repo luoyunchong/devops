@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Hosting;
 
-namespace Devops.Web
+namespace DevOps.Web
 {
     public class Program
     {

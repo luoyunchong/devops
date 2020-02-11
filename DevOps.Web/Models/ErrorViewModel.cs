@@ -1,4 +1,4 @@
-namespace Devops.Web.Models
+namespace DevOps.Web.Models
 {
     public class ErrorViewModel
     {
