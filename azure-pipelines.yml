@@ -19,6 +19,14 @@ variables:
 
 
 steps:
+- task: CmdLine@2
+  inputs:
+    script: |
+      echo read to execute command
+      ls
+      sed -i 's/{ConnectionStrings.Default}/$(ConnectionStrings.Default)/g' DevOps.Web/appsettings.Production.json
+      echo command executed
+
 - script: |
     docker build -f $(dockerfilepath) -t $(imageName) .
     docker login -u $(dockerId) -p $(pwd) $(registry)
