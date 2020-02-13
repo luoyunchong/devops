@@ -7,17 +7,16 @@ EXPOSE 443
 
 FROM mcr.microsoft.com/dotnet/core/sdk:3.1-buster AS build
 WORKDIR /src
-COPY ["DevOps.Web/DevOps.Web.csproj", "DevOps.Web/"]
-COPY ["DevOps.Core/DevOps.Core.csproj", "DevOps.Core/"]
-RUN dotnet restore "DevOps.Web/DevOps.Web.csproj"
+COPY ["DevOps.Api/DevOps.Api.csproj", "DevOps.Api/"]
+RUN dotnet restore "DevOps.Api/DevOps.Api.csproj"
 COPY . .
-WORKDIR "/src/DevOps.Web"
-RUN dotnet build "DevOps.Web.csproj" -c Release -o /app/build
+WORKDIR "/src/DevOps.Api"
+RUN dotnet build "DevOps.Api.csproj" -c Release -o /app/build
 
 FROM build AS publish
-RUN dotnet publish "DevOps.Web.csproj" -c Release -o /app/publish
+RUN dotnet publish "DevOps.Api.csproj" -c Release -o /app/publish
 
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
-ENTRYPOINT ["dotnet", "DevOps.Web.dll"]
+ENTRYPOINT ["dotnet", "DevOps.Api.dll"]
