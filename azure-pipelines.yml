@@ -14,8 +14,10 @@ variables:
   dockerId: luoyunchong@foxmail.com            
   namespace: igeekfan                            
   imageName: devops      
+  imageNameApi: devops-api      
   registry: registry.cn-hangzhou.aliyuncs.com
   dockerfilepath:  DevOps.Web/Dockerfile 
+  dockerfileapipath:  DevOps.Api/Dockerfile 
 
 
 steps:
@@ -29,7 +31,11 @@ steps:
 
 - script: |
     docker build -f $(dockerfilepath) -t $(imageName) .
+    docker build -f $(dockerfileapipath) -t $(imageNameApi) .
     docker login -u $(dockerId) -p $(pwd) $(registry)
     docker tag $(imageName) $(registry)/$(namespace)/$(imageName)
     docker push $(registry)/$(namespace)/$(imageName)
+
+    docker tag $(imageNameApi) $(registry)/$(namespace)/$(imageNameApi)
+    docker push $(registry)/$(namespace)/$(imageNameApi)
   displayName: push to aliyun
