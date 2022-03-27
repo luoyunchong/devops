@@ -32,7 +32,7 @@ steps:
 - script: |
     docker build -f $(dockerfilepath) -t $(imageName) .
     docker build -f $(dockerfileapipath) -t $(imageNameApi) .
-    docker login -u $(dockerId) -p $(pwd) $(registry)
+    echo $(pwd) | docker login --username $(dockerId) $(registry) --password-stdin
     docker tag $(imageName) $(registry)/$(namespace)/$(imageName)
     docker push $(registry)/$(namespace)/$(imageName)
 
