@@ -19,19 +19,16 @@ namespace DevOps.Web
             Configuration = configuration;
             IConfigurationSection configurationSection = Configuration.GetSection("ConnectionStrings:Default");
             Fsql = new FreeSqlBuilder()
-                .UseConnectionString(DataType.MySql, configurationSection.Value)
+                .UseConnectionString(DataType.Sqlite, configurationSection.Value)
                 .UseAutoSyncStructure(true)
                 .Build();
 
             //Fsql.CodeFirst.IsAutoSyncStructure = true;
 
-            Fsql.Aop.CurdAfter = (s, e) =>
+            Fsql.Aop.CurdAfter += (s, e) =>
             {
                 if (e.ElapsedMilliseconds > 200)
-                {
-                    //记录日志
-                    //发送短信给负责人
-                }
+                    Console.WriteLine($"线程：{e.Sql}\r\n");
             };
         }
 
