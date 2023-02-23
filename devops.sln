@@ -13,7 +13,12 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DevOps.Core", "DevOps.Core\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DevOps.Web", "DevOps.Web\DevOps.Web.csproj", "{56C44AB4-EDE0-41E6-A6D1-24D64C3CE160}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DevOps.Api", "DevOps.Api\DevOps.Api.csproj", "{76912240-A09B-4A30-88A3-63FF210A5549}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DevOps.Api", "DevOps.Api\DevOps.Api.csproj", "{76912240-A09B-4A30-88A3-63FF210A5549}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "解决方案项", "解决方案项", "{335EE913-5520-465C-8C11-422622A17894}"
+	ProjectSection(SolutionItems) = preProject
+		run.bash = run.bash
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
