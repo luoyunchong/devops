@@ -17,7 +17,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DevOps.Api", "DevOps.Api\De
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "解决方案项", "解决方案项", "{335EE913-5520-465C-8C11-422622A17894}"
 	ProjectSection(SolutionItems) = preProject
-		run.bash = run.bash
+		run_devops_api.bash = run_devops_api.bash
+		run_devops_web.bash = run_devops_web.bash
 	EndProjectSection
 EndProject
 Global

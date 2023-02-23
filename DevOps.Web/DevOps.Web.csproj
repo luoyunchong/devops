@@ -20,13 +20,19 @@
     <PackageReference Include="FreeSql" Version="3.2.687" />
     <PackageReference Include="FreeSql.Provider.Sqlite" Version="3.2.687" />
     <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="7.0.0" />
-    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.17.0" />
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.17.2" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="7.0.4" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\DevOps.Core\DevOps.Core.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="DevOps.Web.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
 
