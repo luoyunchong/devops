@@ -1,0 +1,21 @@
+version: '3.4'
+
+services:
+  devops.api:
+    image: ${DOCKER_REGISTRY-}devopsapi
+    build:
+      context: .
+      dockerfile: DevOps.Api/Dockerfile
+    ports:
+    - 5000:80
+    - 5001:443
+
+  devops.web:
+    image: ${DOCKER_REGISTRY-}devopsweb
+    build:
+      context: .
+      dockerfile: DevOps.Web/Dockerfile
+    ports:
+    - 5002:80
+    - 5003:443
+

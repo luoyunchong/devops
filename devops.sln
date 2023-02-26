@@ -3,12 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.2.32526.322
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{B287DE8F-8FC3-4CD0-B804-17BDB8D4346D}"
-	ProjectSection(SolutionItems) = preProject
-		azure-pipelines.yml = azure-pipelines.yml
-		README.md = README.md
-	EndProjectSection
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DevOps.Core", "DevOps.Core\DevOps.Core.csproj", "{F5DC55E9-A301-4358-93EF-F9BD558A93E7}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DevOps.Web", "DevOps.Web\DevOps.Web.csproj", "{56C44AB4-EDE0-41E6-A6D1-24D64C3CE160}"
@@ -17,9 +11,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DevOps.Api", "DevOps.Api\De
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "解决方案项", "解决方案项", "{335EE913-5520-465C-8C11-422622A17894}"
 	ProjectSection(SolutionItems) = preProject
+		azure-pipelines.yml = azure-pipelines.yml
+		README.md = README.md
 		run_devops_api.bash = run_devops_api.bash
 		run_devops_web.bash = run_devops_web.bash
 	EndProjectSection
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{EEB8DA5E-3777-4BAD-B6AA-497753341D82}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +37,10 @@ Global
 		{76912240-A09B-4A30-88A3-63FF210A5549}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{76912240-A09B-4A30-88A3-63FF210A5549}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{76912240-A09B-4A30-88A3-63FF210A5549}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EEB8DA5E-3777-4BAD-B6AA-497753341D82}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EEB8DA5E-3777-4BAD-B6AA-497753341D82}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EEB8DA5E-3777-4BAD-B6AA-497753341D82}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EEB8DA5E-3777-4BAD-B6AA-497753341D82}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
