@@ -1,3 +1,5 @@
+[English](README.en.md) | **简体中文**
+
 # azure devops
 
 - [.Net Core DevOps -免费用Azure四步实现自动化发布（CI/CD）](https://www.cnblogs.com/zhaozhengyan/p/azure-devops-aliyun.html)
