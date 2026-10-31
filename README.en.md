@@ -17,6 +17,6 @@ docker-compose -f "docker-compose.yml" -f "docker-compose.override.yml" up -d
 On macOS or Linux:
 
 ```bash
-dotnet dev-certs https -ep ${HOME}/.aspnet/https/aspnetapp.pfx -p "$CERT_PASSWORD"
+dotnet dev-certs https -ep ${HOME}/.aspnet/https/aspnetapp.pfx -p "$CERT_SECRET"
 dotnet dev-certs https --trust
 ```
