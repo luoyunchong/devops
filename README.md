@@ -1,11 +1,9 @@
-[English](README.en.md) | **简体中文**
+**English** | [简体中文](README.zh-CN.md)
 
-# azure devops
+# Azure DevOps
 
-- [.Net Core DevOps -免费用Azure四步实现自动化发布（CI/CD）](https://www.cnblogs.com/zhaozhengyan/p/azure-devops-aliyun.html)
-
-- [.Net Core DevOps - 替换 ConnectionStrings](https://www.cnblogs.com/zhaozhengyan/p/azure-replace-appsettings.html)
-
+- [.NET Core DevOps: four steps to free automated deployment with Azure (CI/CD)](https://www.cnblogs.com/zhaozhengyan/p/azure-devops-aliyun.html)
+- [.NET Core DevOps: replace connection strings](https://www.cnblogs.com/zhaozhengyan/p/azure-replace-appsettings.html)
 
 # Docker Compose
 
@@ -13,15 +11,12 @@
 docker-compose -f "docker-compose.yml" -f "docker-compose.override.yml" up -d
 ```
 
+- [Host ASP.NET Core images with HTTPS using Docker Compose](https://learn.microsoft.com/zh-cn/aspnet/core/security/docker-compose-https?view=aspnetcore-7.0)
+- [Enforce HTTPS in ASP.NET Core](https://learn.microsoft.com/zh-cn/aspnet/core/security/enforcing-ssl?view=aspnetcore-7.0&tabs=visual-studio%2Clinux-ubuntu#ssl-linux)
 
-- 使用 Docker Compose 通过 HTTPS 托管 ASP.NET Core 映像 https://learn.microsoft.com/zh-cn/aspnet/core/security/docker-compose-https?view=aspnetcore-7.0
-- 在 ASP.NET Core 中强制使用 HTTPS https://learn.microsoft.com/zh-cn/aspnet/core/security/enforcing-ssl?view=aspnetcore-7.0&tabs=visual-studio%2Clinux-ubuntu#ssl-linux
+On macOS or Linux:
 
-- macOS 或 Linux
-
-```
-dotnet dev-certs https -ep ${HOME}/.aspnet/https/aspnetapp.pfx -p $CREDENTIAL_PLACEHOLDER$
+```bash
+dotnet dev-certs https -ep ${HOME}/.aspnet/https/aspnetapp.pfx -p "$CERT_SECRET"
 dotnet dev-certs https --trust
 ```
-
-dotnet dev-certs https -ep ${HOME}/.aspnet/https/aspnetapp.pfx -p password
